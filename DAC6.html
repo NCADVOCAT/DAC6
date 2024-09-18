@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>DAC 6 Obligation de déclaration</title>
+</head>
+<body>
+    <h1>DAC 6 Obligation de déclaration – Champ d’application</h1>
+    <form>
+        <label for="client">Client:</label>
+        <input type="text" id="client" name="client"><br><br>
+
+        <label for="numero_dossier">Numéro du dossier:</label>
+        <input type="text" id="numero_dossier" name="numero_dossier"><br><br>
+
+        <label for="nom_dossier">Nom du dossier:</label>
+        <input type="text" id="nom_dossier" name="nom_dossier"><br><br>
+
+        <label for="date_ouverture">Date d’ouverture du dossier:</label>
+        <input type="date" id="date_ouverture" name="date_ouverture"><br><br>
+
+        <h2>1. Il n’y a pas obligation de déclaration</h2>
+        <p>Veuillez cocher la case correspondante et indiquer les raisons ci-dessous:</p>
+        <input type="checkbox" id="contentieux" name="contentieux">
+        <label for="contentieux">il s’agit uniquement d’un dossier de contentieux et, dans le cadre de ce contentieux, aucun conseil de structuration n’est donné au client</label><br>
+        <input type="checkbox" id="mandat" name="mandat">
+        <label for="mandat">le mandat ne s’est pas matérialisé</label><br>
+        <input type="checkbox" id="implication_fiscale" name="implication_fiscale">
+        <label for="implication_fiscale">il n’y a aucune implication fiscale directe ou indirecte ou les seuls impôts concernés sont la TVA, les droits de douane, ou les droits d’accises couverts par d’autres législations de l’UE relatifs à la coopération administrative entre les Etats membres, ou les cotisations sociales obligatoires</label><br>
+        <input type="checkbox" id="transfrontiere" name="transfrontiere">
+        <label for="transfrontiere">il n’y a pas d’aspect transfrontière, le Luxembourg étant le seul pays concerné</label><br>
+        <input type="checkbox" id="aucun_marqueur" name="aucun_marqueur">
+        <label for="aucun_marqueur">aucun marqueur n’est applicable</label><br>
+        <label for="details">Détaillez les raisons ici:</label><br>
+        <textarea id="details" name="details" rows="4" cols="50"></textarea><br><br>
+
+        <h2>2. Il peut y avoir une obligation de déclaration :</h2>
+        <input type="checkbox" id="aucune_case" name="aucune_case">
+        <label for="aucune_case">Aucune des cases n’a été cochée en partie 1 ci-dessus</label><br>
+        <p>Poursuivre avec la partie 2 de ce questionnaire.</p>
+
+        <h2>Partie 2 : DAC 6 Obligation de déclaration – analyse</h2>
+        <h3>Section 1: Informations générales sur le dispositif fiscal</h3>
+        <label for="element_transfrontiere">1. Elément transfrontière:</label><br>
+        <textarea id="element_transfrontiere" name="element_transfrontiere" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif">2. Fournir un bref descriptif des faits et de la façon dont fonctionne le dispositif et identifier les participants au dispositif en indiquant leur coordonnées (adresse, contact, TIN et Etat membre de résidence) ainsi que les entreprises associées participant au dispositif transfrontière (Cf. Article 1 Nr. 7 de la loi DAC 6)</label><br>
+        <textarea id="descriptif" name="descriptif" rows="4" cols="50"></textarea><br><br>
+
+        <h3>Section 2: DAC 6 - Marqueurs (Cf. Annexe de la loi DAC 6 – Partie II)</h3>
+        <h4>Introduction - Critère de l’avantage principal :</h4>
+        <p>Ce critère est applicable à certains marqueurs uniquement.</p>
+        <p>Il sera rempli s’il peut être établi que l’avantage principal ou l’un des avantages principaux qu’une personne peut raisonnablement s’attendre à retirer du dispositif est l’obtention d’un avantage fiscal concernant des impôts directs ou les droits de succession sur le territoire de l’UE ou en dehors de ce territoire.</p>
+
+        <h4>A. Marqueurs généraux liés au critère de l’avantage principal</h4>
+        <label for="confidentialite">1. Engagement à respecter une clause de confidentialité selon laquelle il peut être demandé de ne pas divulguer à d’autres intermédiaires ou aux autorités fiscales comment le dispositif pourrait procurer un avantage fiscal – Marqueur A.1 Annexe de la loi DAC 6</label><br>
+        <input type="radio" id="confidentialite_oui" name="confidentialite" value="oui">
+        <label for="confidentialite_oui">oui</label><br>
+        <input type="radio" id="confidentialite_non" name="confidentialite" value="non">
+        <label for="confidentialite_non">non</label><br>
+
+        <label for="avantage_principal">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_oui" name="avantage_principal" value="oui">
+        <label for="avantage_principal_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_non" name="avantage_principal" value="non">
+        <label for="avantage_principal_non">non</label><br>
+
+        <label for="raisons">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons" name="raisons" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_avantage">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_avantage" name="descriptif_avantage" rows="4" cols="50"></textarea><br><br>
+
+        <h3>b. au fait qu’un avantage fiscal découle effectivement du dispositif. Ceci inclurait une obligation pour l’intermédiaire de rembourser partiellement ou intégralement les honoraires si l’avantage fiscal escompté n’a pas été partiellement ou totalement généré – Marqueur A.2.b) Annexe de la loi DAC 6</h3>
+        <label for="honoraire_b_oui">oui</label>
+        <input type="radio" id="honoraire_b_oui" name="honoraire_b" value="oui">
+        <label for="honoraire_b_non">non</label>
+        <input type="radio" id="honoraire_b_non" name="honoraire_b" value="non"><br>
+
+        <label for="avantage_principal_b">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_b_oui" name="avantage_principal_b" value="oui">
+        <label for="avantage_principal_b_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_b_non" name="avantage_principal_b" value="non">
+        <label for="avantage_principal_b_non">non</label><br>
+
+        <label for="raisons_b">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_b" name="raisons_b" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_b">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_b" name="descriptif_b" rows="4" cols="50"></textarea><br><br>
+
+        <h3>3. Dispositif pour lequel la documentation et/ou la structure sont en grande partie normalisées et qui est à la disposition de plus d’un contribuable sans avoir besoin d’être adapté de façon importante pour être mis en œuvre – Marqueur A.3 Annexe de la loi DAC 6</h3>
+        <label for="dispositif_oui">oui</label>
+        <input type="radio" id="dispositif_oui" name="dispositif" value="oui">
+        <label for="dispositif_non">non</label>
+        <input type="radio" id="dispositif_non" name="dispositif" value="non"><br>
+
+                <label for="avantage_principal_c">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_c_oui" name="avantage_principal_c" value="oui">
+        <label for="avantage_principal_c_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_c_non" name="avantage_principal_c" value="non">
+        <label for="avantage_principal_c_non">non</label><br>
+
+        <label for="raisons_c">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_c" name="raisons_c" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_c">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_c" name="descriptif_c" rows="4" cols="50"></textarea><br><br>
+
+        <h2>B. Marqueurs spécifiques liés au critère de l’avantage principal</h2>
+
+        <h3>1. Mesures artificielles en vue d’acquérir une société réalisant des pertes - Marqueur B.1 Annexe de la loi DAC 6</h3>
+        <p>Dispositif par le biais duquel un participant au dispositif prend artificiellement des mesures consistant à acquérir une société réalisant des pertes, à mettre fin à l’activité principale de celle-ci et à utiliser ces pertes pour réduire sa charge fiscale y compris par le transfert de ces pertes vers une autre juridiction ou par l’accélération de l’utilisation de ces pertes</p>
+        <label for="mesures_oui">oui</label>
+        <input type="radio" id="mesures_oui" name="mesures" value="oui">
+        <label for="mesures_non">non</label>
+        <input type="radio" id="mesures_non" name="mesures" value="non"><br>
+
+        <label for="avantage_principal_d">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_d_oui" name="avantage_principal_d" value="oui">
+        <label for="avantage_principal_d_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_d_non" name="avantage_principal_d" value="non">
+        <label for="avantage_principal_d_non">non</label><br>
+
+        <label for="raisons_d">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_d" name="raisons_d" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_d">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_d" name="descriptif_d" rows="4" cols="50"></textarea><br><br>
+
+        <h3>2. Conversion de revenus - Marqueur B.2 Annexe de la loi DAC 6</h3>
+        <p>Dispositif qui a pour effet de convertir des revenus en capital, dons ou autres catégories de recettes qui sont taxées à un niveau inférieur (au Luxembourg ou dans un autre pays) ou qui ne sont pas imposées</p>
+        <label for="conversion_oui">oui</label>
+        <input type="radio" id="conversion_oui" name="conversion" value="oui">
+        <label for="conversion_non">non</label>
+        <input type="radio" id="conversion_non" name="conversion" value="non"><br>
+
+        <label for="avantage_principal_e">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_e_oui" name="avantage_principal_e" value="oui">
+        <label for="avantage_principal_e_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_e_non" name="avantage_principal_e" value="non">
+        <label for="avantage_principal_e_non">non</label><br>
+
+        <label for="raisons_e">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_e" name="raisons_e" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_e">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_e" name="descriptif_e" rows="4" cols="50"></textarea><br><br>
+
+        <h3>3. Transactions circulaires - Marqueur B.3 Annexe de la loi DAC 6</h3>
+        <p>Dispositif qui inclut des transactions circulaires ayant pour résultat un “carrousel” de fonds, au moyen d’entités interposées sans fonction commerciale primaire ou opérations qui se compensent ou s’annulent mutuellement ou qui ont des caractéristiques similaires</p>
+        <label for="transactions_oui">oui</label>
+        <input type="radio" id="transactions_oui" name="transactions" value="oui">
+        <label for="transactions_non">non</label>
+        <input type="radio" id="transactions_non" name="transactions" value="non"><br>
+
+        <label for="avantage_principal_f">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_f_oui" name="avantage_principal_f" value="oui">
+        <label for="avantage_principal_f_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_f_non" name="avantage_principal_f" value="non">
+        <label for="avantage_principal_f_non">non</label><br>
+
+        <label for="raisons_f">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_f" name="raisons_f" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_f">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_f" name="descriptif_f" rows="4" cols="50"></textarea><br><br>
+
+        <h2>C. Marqueurs spécifiques liés aux opérations transfrontières</h2>
+
+        <h3>1. Dispositif qui prévoit une déduction de paiements transfrontières effectués entre deux ou plusieurs entreprises associées lorsque : (Marqueur C.1 Annexe de la loi DAC 6)</h3>
+        <label for="residence_fiscale">a. le bénéficiaire n’a pas de résidence fiscale - Marqueur C.1. a) Annexe de la loi DAC 6</label><br>
+        <input type="radio" id="residence_fiscale_oui" name="residence_fiscale" value="oui">
+        <label for="residence_fiscale_oui">oui</label><br>
+        <input type="radio" id="residence_fiscale_non" name="residence_fiscale" value="non">
+        <label for="residence_fiscale_non">non</label><br>
+
+        <label for="descriptif_g">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_g" name="descriptif_g" rows="4" cols="50"></textarea><br><br>
+
+        <label for="juridiction_fiscale">b. i) le bénéficiaire réside fiscalement dans une juridiction qui ne lève pas d’impôt sur les sociétés ou lève un impôt à un taux zéro ou presque nul - Marqueur C.1. b) (i) Annexe de la loi DAC 6</label><br>
+        <input type="radio" id="juridiction_fiscale_oui" name="juridiction_fiscale" value="oui">
+        <label for="juridiction_fiscale_oui">oui</label><br>
+        <input type="radio" id="juridiction_fiscale_non" name="juridiction_fiscale" value="non">
+        <label for="juridiction_fiscale_non">non</label><br>
+
+        <label for="avantage_principal_g">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_g_oui" name="avantage_principal_g" value="oui">
+        <label for="avantage_principal_g_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_g_non" name="avantage_principal_g" value="non">
+                <label for="avantage_principal_g_non">non</label><br>
+
+        <label for="raisons_g">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_g" name="raisons_g" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_h">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_h" name="descriptif_h" rows="4" cols="50"></textarea><br><br>
+
+        <label for="juridiction_non_cooperative">ii) le bénéficiaire réside fiscalement dans une juridiction non-coopérative figurant sur la liste de l’UE ou de l’OCDE - Marqueur C.1. b) ii) Annexe de la loi DAC 6</label><br>
+        <input type="radio" id="juridiction_non_cooperative_oui" name="juridiction_non_cooperative" value="oui">
+        <label for="juridiction_non_cooperative_oui">oui</label><br>
+        <input type="radio" id="juridiction_non_cooperative_non" name="juridiction_non_cooperative" value="non">
+        <label for="juridiction_non_cooperative_non">non</label><br>
+
+        <label for="descriptif_i">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_i" name="descriptif_i" rows="4" cols="50"></textarea><br><br>
+
+        <label for="exoneration_totale">c. le paiement bénéficie d’une exonération totale dans la juridiction où le bénéficiaire réside à des fins fiscales - Marqueur C.1.c) Annexe de la loi DAC 6</label><br>
+        <input type="radio" id="exoneration_totale_oui" name="exoneration_totale" value="oui">
+        <label for="exoneration_totale_oui">oui</label><br>
+        <input type="radio" id="exoneration_totale_non" name="exoneration_totale" value="non">
+        <label for="exoneration_totale_non">non</label><br>
+
+        <label for="avantage_principal_h">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_h_oui" name="avantage_principal_h" value="oui">
+        <label for="avantage_principal_h_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_h_non" name="avantage_principal_h" value="non">
+        <label for="avantage_principal_h_non">non</label><br>
+
+        <label for="raisons_h">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_h" name="raisons_h" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_j">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_j" name="descriptif_j" rows="4" cols="50"></textarea><br><br>
+
+        <label for="regime_fiscal_preferentiel">d. le paiement bénéficie d’un régime fiscal préférentiel dans la juridiction où le bénéficiaire réside à des fins fiscales - Marqueur C.1.d) Annexe de la loi DAC 6</label><br>
+        <input type="radio" id="regime_fiscal_preferentiel_oui" name="regime_fiscal_preferentiel" value="oui">
+        <label for="regime_fiscal_preferentiel_oui">oui</label><br>
+        <input type="radio" id="regime_fiscal_preferentiel_non" name="regime_fiscal_preferentiel" value="non">
+        <label for="regime_fiscal_preferentiel_non">non</label><br>
+
+        <label for="avantage_principal_i">Le critère de l’Avantage Principal est-il rempli ?</label><br>
+        <input type="radio" id="avantage_principal_i_oui" name="avantage_principal_i" value="oui">
+        <label for="avantage_principal_i_oui">oui</label><br>
+        <input type="radio" id="avantage_principal_i_non" name="avantage_principal_i" value="non">
+        <label for="avantage_principal_i_non">non</label><br>
+
+        <label for="raisons_i">Si non, indiquer les raisons ici :</label><br>
+        <textarea id="raisons_i" name="raisons_i" rows="2" cols="50"></textarea><br><br>
+
+        <label for="descriptif_k">Si oui aux 2 questions ci-dessus, fournir ici un bref descriptif :</label><br>
+        <textarea id="descriptif_k" name="descriptif_k" rows="4" cols="50"></textarea><br><br>
+
+        <h3>2. Déductions pour le même amortissement</h3>
+        <p>Déductions pour le même amortissement d’un actif demandées dans plus d’une juridiction - Marqueur C.2 Annexe de la loi DAC 6</p>
+        <label for="amortissement_oui">oui</label>
+        <input type="radio" id="amortissement_oui" name="amortissement" value="oui">
+        <label for="amortissement_non">non</label>
+        <input type="radio" id="amortissement_non" name="amortissement" value="non"><br>
+
+        <label for="descriptif_l">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_l" name="descriptif_l" rows="4" cols="50"></textarea><br><br>
+
+        <h3>3. Allègement de double imposition - Marqueur C.3 Annexe de la loi DAC 6</h3>
+        <p>Allègement au titre de la double imposition pour un même élément de revenu ou de capital demandé dans plusieurs juridictions</p>
+        <label for="double_imposition_oui">oui</label>
+        <input type="radio" id="double_imposition_oui" name="double_imposition" value="oui">
+        <label for="double_imposition_non">non</label>
+        <input type="radio" id="double_imposition_non" name="double_imposition" value="non"><br>
+
+        <label for="descriptif_m">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_m" name="descriptif_m" rows="4" cols="50"></textarea><br><br>
+
+        <h3>4. Valeurs différentes pour un transfert d’actif - Marqueur C.4 Annexe de la loi DAC 6</h3>
+        <p>Dispositif qui prévoit des transferts d’actifs et où il existe une différence importante dans le montant considéré comme étant payable en contrepartie des actifs dans les juridictions concernées</p>
+        <label for="transfert_actif_oui">oui</label>
+        <input type="radio" id="transfert_actif_oui" name="transfert_actif" value="oui">
+        <label for="transfert_actif_non">non</label>
+        <input type="radio" id="transfert_actif_non" name="transfert_actif" value="non"><br>
+
+        <label for="descriptif_n">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_n" name="descriptif_n" rows="4" cols="50"></textarea><br><br>
+
+        <h2>D. Marqueurs concernant l’échange automatique d’informations et les bénéficiaires effectifs</h2>
+
+        <h3>1. Dispositifs portant atteinte aux obligations de déclaration applicables aux comptes financiers - Marqueurs D.1.a) à f) Annexe de la loi DAC 6</h3>
+        <p>Dispositifs qui peuvent avoir pour effet de porter atteinte aux obligations de déclaration en vertu du droit mettant en œuvre la législation de l’Union européenne ou tout accord équivalent concernant l’échange automatique d’information sur les comptes financiers (au sens de la loi modifiée du 18 décembre 2015) y compris des accords avec des pays tiers (par ex. OECD Common Reporting Standard / Norme Commune de Déclaration ) ou qui tirent parti de l’absence d’une telle législation ou de tels accords. Sont notamment visés (liste non exhaustive) les dispositifs suivants:</p>
+        <label for="compte_financier_oui">a. l’utilisation d’un compte, d’un produit ou d’un investissement qui n’est pas ou dont l’objectif est de ne pas être un compte financier, mais qui possède des caractéristiques substantiellement similaires à celles d’un compte financier</label><br>
+        <input type="radio" id="compte_financier
+        <label for="compte_financier_non">non</label><br>
+
+        <label for="descriptif_o">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_o" name="descriptif_o" rows="4" cols="50"></textarea><br><br>
+
+        <label for="transfert_comptes">b. le transfert de comptes ou d’actifs financiers vers des juridictions qui ne sont pas liées par l’échange automatique d’informations sur les comptes financiers avec l’État de résidence du contribuable concerné, ou le recours à de telles juridictions</label><br>
+        <input type="radio" id="transfert_comptes_oui" name="transfert_comptes" value="oui">
+        <label for="transfert_comptes_oui">oui</label><br>
+        <input type="radio" id="transfert_comptes_non" name="transfert_comptes" value="non">
+        <label for="transfert_comptes_non">non</label><br>
+
+        <label for="descriptif_p">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_p" name="descriptif_p" rows="4" cols="50"></textarea><br><br>
+
+        <label for="requalification">c. la requalification de revenus ou de capitaux en produits ou en paiements qui ne sont soumis à l’échange automatique d’informations sur les comptes financiers</label><br>
+        <input type="radio" id="requalification_oui" name="requalification" value="oui">
+        <label for="requalification_oui">oui</label><br>
+        <input type="radio" id="requalification_non" name="requalification" value="non">
+        <label for="requalification_non">non</label><br>
+
+        <label for="descriptif_q">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_q" name="descriptif_q" rows="4" cols="50"></textarea><br><br>
+
+        <label for="conversion_institution">d. Le transfert ou la conversion d’une institution financière, d’un compte financier ou des actifs qui s’y trouvent en compte financier ou en institution qui ne sont pas à déclarer en vertu de l’échange automatique d’informations sur les comptes financiers</label><br>
+        <input type="radio" id="conversion_institution_oui" name="conversion_institution" value="oui">
+        <label for="conversion_institution_oui">oui</label><br>
+        <input type="radio" id="conversion_institution_non" name="conversion_institution" value="non">
+        <label for="conversion_institution_non">non</label><br>
+
+        <label for="descriptif_r">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_r" name="descriptif_r" rows="4" cols="50"></textarea><br><br>
+
+        <label for="recours_entites">e. Le recours à des entités, montages ou structures qui suppriment ou visent à supprimer la déclaration d’un ou plusieurs titulaires de compte ou personnes détenant le contrôle dans le cadre de l’échange automatique d’informations sur les comptes financiers</label><br>
+        <input type="radio" id="recours_entites_oui" name="recours_entites" value="oui">
+        <label for="recours_entites_oui">oui</label><br>
+        <input type="radio" id="recours_entites_non" name="recours_entites" value="non">
+        <label for="recours_entites_non">non</label><br>
+
+        <label for="descriptif_s">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_s" name="descriptif_s" rows="4" cols="50"></textarea><br><br>
+
+        <label for="diligence_raisonnable">f. Les dispositifs qui portent atteinte aux procédures de diligence raisonnable utilisées par les institutions financières pour se conformer à leurs obligations de déclarer des informations sur les comptes financiers, ou qui exploitent les insuffisances de ces procédures, y compris le recours à des juridictions appliquant de manière inadéquate ou insuffisante la législation relative à la lutte contre le blanchiment de capitaux, ou ayant des exigences insuffisantes en matière de transparence en ce qui concerne les personnes morales ou les constructions juridiques</label><br>
+        <input type="radio" id="diligence_raisonnable_oui" name="diligence_raisonnable" value="oui">
+        <label for="diligence_raisonnable_oui">oui</label><br>
+        <input type="radio" id="diligence_raisonnable_non" name="diligence_raisonnable" value="non">
+        <label for="diligence_raisonnable_non">non</label><br>
+
+        <label for="descriptif_t">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_t" name="descriptif_t" rows="4" cols="50"></textarea><br><br>
+
+        <label for="contourner_obligations">g. Tout autre dispositif ayant potentiellement pour effet de contourner les obligations de déclaration concernant les comptes financiers</label><br>
+        <input type="radio" id="contourner_obligations_oui" name="contourner_obligations" value="oui">
+        <label for="contourner_obligations_oui">oui</label><br>
+        <input type="radio" id="contourner_obligations_non" name="contourner_obligations" value="non">
+        <label for="contourner_obligations_non">non</label><br>
+
+        <label for="descriptif_u">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_u" name="descriptif_u" rows="4" cols="50"></textarea><br><br>
+
+        <h2>2. Chaîne de propriété non-transparente – Dissimulation du bénéficiaire effectif - Marqueur D.2 Annexe de la loi DAC 6</h2>
+        <p>Dispositif faisant intervenir une chaîne de propriété formelle ou effective non transparente par le recours à des personnes, des constructions juridiques ou des structures (conditions cumulatives):</p>
+        <label for="chaine_propriete_oui">oui</label>
+        <input type="radio" id="chaine_propriete_oui" name="chaine_propriete" value="oui">
+        <label for="chaine_propriete_non">non</label>
+        <input type="radio" id="chaine_propriete_non" name="chaine_propriete" value="non"><br>
+
+        <label for="descriptif_v">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_v" name="descriptif_v" rows="4" cols="50"></textarea><br><br>
+
+        <h2>E. Marqueurs spécifiques concernant les prix de transfert</h2>
+
+        <h3>1. Utilisation de régimes de protection unilatéraux - Marqueur E.1 Annexe de la loi DAC 6</h3>
+        <label for="regimes_protection_oui">oui</label>
+        <input type="radio" id="regimes_protection_oui" name="regimes_protection" value="oui">
+        <label for="regimes_protection_non">non</label>
+        <input type="radio" id="regimes_protection_non" name="regimes_protection" value="non"><br>
+
+        <label for="descriptif_w">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_w" name="descriptif_w" rows="4" cols="50"></textarea><br><br>
+
+        <h3>2. Transfert d’actifs incorporels difficiles à évaluer - Marqueur E.2 Annexe de la loi DAC 6</h3>
+        <p>Dispositif qui prévoit le transfert d’actifs incorporels difficiles à évaluer. Le terme d’« actifs incorporels difficiles » à évaluer englobe des actifs incorporels ou des droits sur des actifs incorporels pour lesquels, au moment de leur transfert entre des entreprises associées (conditions cumulatives):</p>
+        <label for="actifs_incorporels_oui">oui</label>
+        <input type="radio" id="actifs_incorporels_oui" name="actifs_incorporels" value="oui">
+        <label for="actifs_incorporels_non">non</label>
+        <input type="radio" id="actifs_incorporels_non" name="actifs_incorporels" value="non"><br>
+
+                <label for="descriptif_x">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_x" name="descriptif_x" rows="4" cols="50"></textarea><br><br>
+
+        <h3>3. Transfert de fonctions, risques ou d’actifs - Marqueur E.3 Annexe de la loi DAC 6</h3>
+        <p>Dispositif qui prévoit un transfert transfrontière de fonctions et/ou de risques et/ou d'actifs au sein du groupe, si le bénéfice avant intérêts et impôts (BAII) annuel prévu, dans les trois ans suivant le transfert, du ou des cédants, est inférieur à 50 % du BAII annuel prévu de ce cédant ou de ces cédants si le transfert n'avait pas été effectué</p>
+        <label for="transfert_fonctions_oui">oui</label>
+        <input type="radio" id="transfert_fonctions_oui" name="transfert_fonctions" value="oui">
+        <label for="transfert_fonctions_non">non</label>
+        <input type="radio" id="transfert_fonctions_non" name="transfert_fonctions" value="non"><br>
+
+        <label for="descriptif_y">Si oui, fournir un bref descriptif ici:</label><br>
+        <textarea id="descriptif_y" name="descriptif_y" rows="4" cols="50"></textarea><br><br>
+
+        <h2>Conclusion :</h2>
+        <label for="marqueur_applicable">Au moins un marqueur est applicable :</label><br>
+        <input type="radio" id="marqueur_applicable_oui" name="marqueur_applicable" value="oui">
+        <label for="marqueur_applicable_oui">oui</label><br>
+        <input type="radio" id="marqueur_applicable_non" name="marqueur_applicable" value="non">
+        <label for="marqueur_applicable_non">non</label><br>
+
+        <p>Si oui, le dispositif doit être déclaré - Poursuivre avec la partie 3 de ce questionnaire.</p>
+        <p>Si non, le dispositif n’est pas à déclarer – Questionnaire à signer (dernière page du questionnaire) et à classer dans le dossier</p>
+
+        <h2>Partie 3: DAC 6 dispositif à déclarer - Informations complémentaires</h2>
+
+        <h3>1. Délais applicables aux obligations de déclaration et de notification (Cf. Art. 2.(1) 3.(2) et 4.(2) de la loi DAC 6)</h3>
+        <label for="date_mise_en_oeuvre">Date à laquelle la première étape du dispositif a été mise en oeuvre ou à laquelle le dispositif est prêt à être mis en œuvre ou à laquelle une aide, une assistance ou des conseils ont été fournis (date intervenant le plus tôt à indiquer)</label><br>
+        <input type="date" id="date_mise_en_oeuvre" name="date_mise_en_oeuvre"><br><br>
+
+        <label for="date_notification">Date à laquelle l’obligation de NOTIFICATION s’applique</label><br>
+        <input type="date" id="date_notification" name="date_notification"><br><br>
+
+        <label for="date_declaration">Date à laquelle l’obligation de déclaration par D’AUTRES INTERMEDIAIRES ou CONTRIBUABLES s’applique</label><br>
+        <input type="date" id="date_declaration" name="date_declaration"><br><br>
+
+        <h3>2. Notification au client (intermédiaire ou contribuable concerné)</h3>
+        <input type="radio" id="intermediaire" name="notification_client" value="intermediaire">
+        <label for="intermediaire">intermédiaire</label><br>
+        <input type="radio" id="contribuable_concerne" name="notification_client" value="contribuable_concerne">
+        <label for="contribuable_concerne">contribuable concerné</label><br><br>
+
+        <p>Si intermédiaire, poursuivre avec la partie 3 de ce questionnaire.</p>
+        <p>Si contribuable concerné, poursuivre avec la partie 4 de ce questionnaire.</p>
+
+        <h3>3. Notification à faire (dans les 10 jours) au client intermédiaire</h3>
+
+        <h3>4. Une notification indiquant i) l’application du secret professionnel à l’avocat et ii) l’obligation de déclaration (à faire dans les 30 jours) relative au dispositif (indiquer le dossier concerné et les contribuables) Notification au contribuable concerné</h3>
+        
+        <label for="declaration_faite">a. Déclaration déjà faite par le contribuable concerné</label><br>
+        <input type="radio" id="declaration_faite_oui" name="declaration_faite" value="oui">
+        <label for="declaration_faite_oui">oui</label><br>
+        <input type="radio" id="declaration_faite_non" name="declaration_faite" value="non">
+        <label for="declaration_faite_non">non</label><br><br>
+
+        <p>Si oui, vérifier ce qui a été déclaré par le contribuable concerné, demander une copie du bordereau de transmission et le numéro attribué par l’ACD (Arrangement ID) – documents à classer dans le dossier</p>
+        <p>Si non, poursuivre avec le point b) ci-dessous</p>
+
+        <h3>b. Notification à faire (dans les 10 jours) au client contribuable concerné</h3>
+        <p>Une notification indiquant i) l’application du secret professionnel à l’avocat, et ii) l’obligation de déclaration (à faire dans les 30 jours) relative au dispositif accompagnée de l’ensemble des informations nécessaires à la déclaration a été envoyée au contribuable concerné</p>
+
+        <label for="contribuable_coordonnees">Contribuable concerné à indiquer y compris coordonnées (adresse, personne de contact, TIN)</label><br>
+        <textarea id="contribuable_coordonnees" name="contribuable_coordonnees" rows="4" cols="50"></textarea><br><br>
+
+        <label for="informations_a_communiquer">Informations à communiquer au contribuable concerné:</label><br>
+        <textarea id="informations_a_communiquer" name="informations_a_communiquer" rows="4" cols="50"></textarea><br><br>
+
+        <ol>
+            <li>Identification de l’ensemble des intermédiaires et contribuables concernés, y compris leur nom, leur date et lieu de naissance (pour les personnes physiques), leur résidence fiscale et leur numéro d’identification fiscale</li>
+            <li>Identification des entreprises associées au contribuable concerné si participation au dispositif transfrontière</li>
+            <li>Liste des marqueurs applicables au dispositif</li>
+            <li>Résumé du dispositif transfrontière (sans divulguer de secret commercial, industriel ou des informations dont la divulgation serait contraire à l’ordre public)</li>
+            <li>Date à laquelle la première étape de la mise en œuvre du dispositif transfrontière devant faire l’objet d’une déclaration a été accomplie ou sera accomplie</li>
+            <li>Informations sur les dispositions légales des États concernés sur lesquelles se fonde le dispositif transfrontière (si disponibles)</li>
+            <li>Valeur du dispositif transfrontière</li>
+            <li>État membre des contribuables concernés ainsi que tout autre État membre susceptible d’être concerné par le dispositif transfrontière</li>
+            <li>Identification de toute autre personne susceptible d’être concernée par le dispositif et États membres cette personne</li>
+        </ol>
+
+        <p>Copie de la notification à classer dans le dossier</p>
+
+        <p>Luxembourg, le</p>
+
+        <label for="lieu_date">Lieu, date:</label><br>
+        <input type="text" id="lieu_date" name="lieu_date"><br><br>
+
+        <label for="nom_professionnel">Nom du professionnel:</label><br>
+        <input type="text" id="nom_professionnel" name="nom_professionnel"><br><br>
+
+        <label for="nom_associe">Nom de l’associé:</label><br>
+        <input type="text" id="nom_associe" name="nom_associe"><br><br>
+    </form>
+</body>
+</html>
